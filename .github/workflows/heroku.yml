@@ -15,7 +15,7 @@ jobs:
       HEROKU_REGISTRY_IMAGE: registry.heroku.com/${HEROKU_APP_NAME}/web
     steps:
       - uses: actions/checkout@v2
-      - name: Build docker image and deploy to Heroku
+      - name: Build and deploy
         env:
           HEROKU_API_KEY: ${{ secrets.HEROKU_API_KEY }}
         run: |

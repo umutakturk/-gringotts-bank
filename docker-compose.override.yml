@@ -1,0 +1,13 @@
+version: '3.4'
+
+services:
+  gringottsbank.api:
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ASPNETCORE_URLS=https://+:5100;http://+:5000
+    ports:
+      - 5000:5000
+      - 5100:5100
+    volumes:
+      - ${APPDATA}/Microsoft/UserSecrets:/root/.microsoft/usersecrets:ro
+      - ${APPDATA}/ASP.NET/Https:/root/.aspnet/https:ro

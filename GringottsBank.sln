@@ -1,0 +1,76 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.32112.339
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{AEB65010-79D7-4753-88B3-DDCB1513267B}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GringottsBank.Application", "src\GringottsBank.Application\GringottsBank.Application.csproj", "{DD87B598-D354-4AD0-B819-DB00589D429F}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GringottsBank.API", "src\GringottsBank.API\GringottsBank.API.csproj", "{1CD9B5EE-3608-4680-BA7B-105AA266F39F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{296EB4EB-FF80-4B23-999C-86BC9760E31A}"
+	ProjectSection(SolutionItems) = preProject
+		.dockerignore = .dockerignore
+		.editorconfig = .editorconfig
+		.gitignore = .gitignore
+		dev.Dockerfile = dev.Dockerfile
+		.github\workflows\heroku.yml = .github\workflows\heroku.yml
+		LICENSE = LICENSE
+		prod.Dockerfile = prod.Dockerfile
+		readme.md = readme.md
+	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GringottsBank.Domain", "src\GringottsBank.Domain\GringottsBank.Domain.csproj", "{6E9391C4-55A6-491D-B139-2B1C0296D072}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GringottsBank.Common", "src\GringottsBank.Common\GringottsBank.Common.csproj", "{81CF2A30-1C6D-44DF-AC39-26A0C88AA364}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GringottsBank.Infrastructure", "src\GringottsBank.Infrastructure\GringottsBank.Infrastructure.csproj", "{34E4BDE7-9BDF-4F61-B72F-2AB5DFB84B27}"
+EndProject
+Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{2B3321B1-A497-4A61-BA91-506624B21A88}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DD87B598-D354-4AD0-B819-DB00589D429F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DD87B598-D354-4AD0-B819-DB00589D429F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DD87B598-D354-4AD0-B819-DB00589D429F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DD87B598-D354-4AD0-B819-DB00589D429F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1CD9B5EE-3608-4680-BA7B-105AA266F39F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1CD9B5EE-3608-4680-BA7B-105AA266F39F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1CD9B5EE-3608-4680-BA7B-105AA266F39F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1CD9B5EE-3608-4680-BA7B-105AA266F39F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6E9391C4-55A6-491D-B139-2B1C0296D072}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6E9391C4-55A6-491D-B139-2B1C0296D072}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6E9391C4-55A6-491D-B139-2B1C0296D072}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6E9391C4-55A6-491D-B139-2B1C0296D072}.Release|Any CPU.Build.0 = Release|Any CPU
+		{81CF2A30-1C6D-44DF-AC39-26A0C88AA364}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{81CF2A30-1C6D-44DF-AC39-26A0C88AA364}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{81CF2A30-1C6D-44DF-AC39-26A0C88AA364}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{81CF2A30-1C6D-44DF-AC39-26A0C88AA364}.Release|Any CPU.Build.0 = Release|Any CPU
+		{34E4BDE7-9BDF-4F61-B72F-2AB5DFB84B27}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{34E4BDE7-9BDF-4F61-B72F-2AB5DFB84B27}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{34E4BDE7-9BDF-4F61-B72F-2AB5DFB84B27}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{34E4BDE7-9BDF-4F61-B72F-2AB5DFB84B27}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2B3321B1-A497-4A61-BA91-506624B21A88}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2B3321B1-A497-4A61-BA91-506624B21A88}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2B3321B1-A497-4A61-BA91-506624B21A88}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2B3321B1-A497-4A61-BA91-506624B21A88}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{DD87B598-D354-4AD0-B819-DB00589D429F} = {AEB65010-79D7-4753-88B3-DDCB1513267B}
+		{1CD9B5EE-3608-4680-BA7B-105AA266F39F} = {AEB65010-79D7-4753-88B3-DDCB1513267B}
+		{6E9391C4-55A6-491D-B139-2B1C0296D072} = {AEB65010-79D7-4753-88B3-DDCB1513267B}
+		{81CF2A30-1C6D-44DF-AC39-26A0C88AA364} = {AEB65010-79D7-4753-88B3-DDCB1513267B}
+		{34E4BDE7-9BDF-4F61-B72F-2AB5DFB84B27} = {AEB65010-79D7-4753-88B3-DDCB1513267B}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {BDB460B4-D7CF-4552-B018-9F4E75B5BF0E}
+	EndGlobalSection
+EndGlobal

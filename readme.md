@@ -5,6 +5,12 @@ A simple online banking API demo project.
  - [Docker](https://www.docker.com/get-started)
  - [Docker Compose](https://docs.docker.com/compose/install/)
 
+## Architecture
+This application is developed with .NET 5. Entity Framework is used as an ORM layer and PostgreSQL is used as a database. 
+The domain-driven design approach is used for managing and validating business rules. [Concurrency Token](https://www.npgsql.org/efcore/modeling/concurrency.html) 
+guarantees transaction consistency. Swagger is used for the documentation of endpoints. 
+GitHub Actions is used for deployment operations to Heroku.
+
 ## Demo
 https://gringotts-bank-api.herokuapp.com/swagger/index.html
 

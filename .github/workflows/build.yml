@@ -2,12 +2,13 @@ name: Build
 on:
   push:
     branches:
-      - master
-  pull_request:
-    types: [opened, synchronize, reopened]
+      - main
+    paths-ignore:
+      - '**/readme.md'
+
 jobs:
-  build:
-    name: Build
+  sonar:
+    name: Sonar Analysis
     runs-on: windows-latest
     steps:
       - name: Set up JDK 11
@@ -43,5 +44,20 @@ jobs:
         shell: powershell
         run: |
           .\.sonar\scanner\dotnet-sonarscanner begin /k:"umutakturk_gringotts-bank" /o:"umut" /d:sonar.login="${{ secrets.SONAR_TOKEN }}" /d:sonar.host.url="https://sonarcloud.io"
-          <insert_your_build_command>
+          dotnet publish GringottsBank.sln -c Release -o ./src/publish
           .\.sonar\scanner\dotnet-sonarscanner end /d:sonar.login="${{ secrets.SONAR_TOKEN }}"
+  heroku:
+    runs-on: ubuntu-latest
+    env:
+      HEROKU_APP_NAME: ${{ secrets.HEROKU_APP_NAME }}
+      HEROKU_REGISTRY_IMAGE: registry.heroku.com/${HEROKU_APP_NAME}/web
+    steps:
+      - uses: actions/checkout@v2
+      - name: Deploy to Heroku
+        env:
+          HEROKU_API_KEY: ${{ secrets.HEROKU_API_KEY }}
+        run: |
+          heroku container:login
+          docker build --file prod.Dockerfile --tag ${{ env.HEROKU_REGISTRY_IMAGE }}:latest .
+          docker push ${{ env.HEROKU_REGISTRY_IMAGE }}:latest
+          heroku container:release -a ${{ env.HEROKU_APP_NAME }} web

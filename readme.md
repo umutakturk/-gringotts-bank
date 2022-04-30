@@ -11,9 +11,6 @@ The domain-driven design approach is used for managing and validating business r
 guarantees transaction consistency. Swagger serves the documentation of endpoints. 
 GitHub Actions runs the deployment process.
 
-## Demo
-https://gringotts-bank-api.herokuapp.com/swagger/index.html
-
 ## Running locally
 1. Clone the repo `git clone https://github.com/umutakturk/gringotts-bank.git`
 2. Run `docker-compose -f docker-compose.yml -f docker-compose.override.yml up`
